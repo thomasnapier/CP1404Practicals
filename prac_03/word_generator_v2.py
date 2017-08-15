@@ -5,23 +5,32 @@ Random word generator - based on format of words
 Another way to get just consonants would be to use string.ascii_lowercase
 (all letters) and remove the vowels.
 """
+def main():
+    import random
+    #random generator where the user enters the format
+    VOWELS = "aeiou"
+    CONSONANTS = "bcdfghjklmnpqrstvwxyz"
 
-import random
-#random generator where the user enters the format
-VOWELS = "aeiou"
-CONSONANTS = "bcdfghjklmnpqrstvwxyz"
+    word_format = str(input("Enter the format you would like for your word (c = consonant, v = vowel): ")).lower()
+    while is_valid_format(word_format) == False:
+        print("Invalid format")
+        word_format = str(input("Enter the format you would like for your word (c = consonant, v = vowel): ")).lower()
+    word = ""
+    for kind in word_format:
+        if kind == "c":
+            word += random.choice(CONSONANTS)
+        else:
+            word += random.choice(VOWELS)
 
-word_format = str(input("Enter the format you would like for your word (c = consonant, v = vowel): ")).lower()
-word = ""
-for kind in word_format:
-    if kind == "c":
-        word += random.choice(CONSONANTS)
-    else:
-        word += random.choice(VOWELS)
+    print(word)
 
-print(word)
+def is_valid_format(letters):
+    for _ in letters:
+        if _ not in "cv":
+            return False
+    return True
 
-
+main()
 
 # import random
 #
