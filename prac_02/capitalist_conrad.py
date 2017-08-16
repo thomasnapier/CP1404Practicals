@@ -11,8 +11,8 @@ import random
 
 MAX_INCREASE = 0.175  # 17.5%
 MAX_DECREASE = 0.05  # 5%
-MIN_PRICE = 1.00 # $1
-MAX_PRICE = 100.00 # $100
+MIN_PRICE = 1.00  # $1
+MAX_PRICE = 100.00  # $100
 INITIAL_PRICE = 10.0
 OUTPUT_FILE = "stock_output.txt"
 out_file = open(OUTPUT_FILE, 'w')
@@ -20,7 +20,7 @@ price = INITIAL_PRICE
 day = 0
 print("Starting price: ${:,.2f}".format(price), file=out_file)
 
-while price >= MIN_PRICE and price <= MAX_PRICE:
+while MIN_PRICE <= price <= MAX_PRICE:
     price_change = 0
     day += 1
     # generate a random integer of 1 or 2
