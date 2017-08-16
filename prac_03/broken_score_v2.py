@@ -9,6 +9,7 @@ def main():
     score = float(input("Enter score: "))
     print(determine_standing(score))
 
+
 def determine_standing(number):
     """determine the status of the entered score"""
     if number < 0 or number > 100:
