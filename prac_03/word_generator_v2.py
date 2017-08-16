@@ -25,6 +25,7 @@ def main():
     print(word)
 
 def is_valid_format(letters):
+    """check if the format entered by the user conforms to the actual format"""
     for _ in letters:
         if _ not in "cv":
             return False

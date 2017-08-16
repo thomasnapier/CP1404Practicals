@@ -5,6 +5,7 @@ Pseudocode for temperature conversion
 
 
 def main():
+    """Temperature conversion menu with choices"""
     MENU = """C - Convert Celsius to Fahrenheit
     F - Convert Fahrenheit to Celsius
     Q - Quit"""
@@ -27,11 +28,13 @@ def main():
 
 
 def calculate_fahrenheit_celsius(celsius, fahrenheit):
+    """Convert fahrenheit to celsius"""
     celsius = 5 / 9 * (fahrenheit - 32)
     return celsius
 
 
 def calculate_celsius_fahrenheit(celsius):
+    """Convert celsius to fahrenheit"""
     fahrenheit = celsius * 9.0 / 5 + 32
     return fahrenheit
 
