@@ -26,7 +26,7 @@ print(full_initials)
 almost_numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 # from this list of strings
-numbers = [almost_numbers.index(number) for number in almost_numbers]
+numbers = [int(number) for number in almost_numbers]
 print(numbers)
 
 # in lowercase format
