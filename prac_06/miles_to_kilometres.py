@@ -2,6 +2,8 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
 
+CONVERSION_RATE = 1.60934
+
 
 class ConvertMilesToKilometres(App):
     """Class to convert miles to kilometres"""
@@ -14,9 +16,8 @@ class ConvertMilesToKilometres(App):
         return self.root
 
     def handle_calculate(self):
-        conversion_rate = 1.60934
         value = self.get_valid_number()
-        total = value * conversion_rate
+        total = value * CONVERSION_RATE
         self.root.ids.output_label.text = str(total)
 
     def handle_increment(self, change):
@@ -31,5 +32,5 @@ class ConvertMilesToKilometres(App):
         except ValueError:
             return 0
 
-ConvertMilesToKilometres().run()
 
+ConvertMilesToKilometres().run()

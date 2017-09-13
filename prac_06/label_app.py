@@ -2,10 +2,11 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.label import Label
 
+
 class LabelApp(App):
     def __init__(self):
         super().__init__()
-        self.names = ["John", "Bob", "Alex", "Jack", "Robin"]
+        self.names = ["John", "Bob", "Alex", "Jack", "Robin", "Renekton"]
 
     def build(self):
         """
@@ -21,4 +22,6 @@ class LabelApp(App):
         for name in self.names:
             temp_label = Label(text=name)
             self.root.ids.entriesBox.add_widget(temp_label)
+
+
 LabelApp().run()
