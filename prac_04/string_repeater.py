@@ -1,10 +1,11 @@
 strings = []
-string = "l"
-while string != '':
+repeated_strings = []
+string = input("String: ")
+while string != "":
     string = input("String: ")
     strings.append(string)
-for string1 in strings:
-    for string2 in strings:
-        if strings[string1] == strings[string2]:
-            print("Repeated strings: {}".format(strings[string1]))
-print("No repeated strings entered")
+if string in strings:
+    repeated_strings = [string]
+else:
+    print("No strings repeated")
+print("Repeated strings: {}".format(repeated_strings))

@@ -1,0 +1,16 @@
+BoxLayout:
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.2
+        Button:
+            text: 'Calculate Grade'
+            on_press: app.handle_calculate()
+    BoxLayout:
+        orientation: 'vertical'
+        TextInput:
+            id: input_score
+            text: ''
+        Label:
+            id: output_label
+            text: 'Enter your score'
+            color: (1, 1, 0, 1)
