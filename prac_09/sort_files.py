@@ -2,7 +2,7 @@ import os
 import shutil
 
 filetypes = [".txt", ".xlsx", ".xls", ".png", ".jpg", ".gif", ".docx", ".doc"]
-os.chdir("FilesToSort")
+os.chdir("FilesToSort1")
 
 for filetype in filetypes:
     name = filetype.split('.')[1]
