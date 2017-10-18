@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical
+CP1404/CP5632 Practical 09
 File renaming and os examples
 """
 import shutil
@@ -50,8 +50,6 @@ def get_fixed_filename(filename):
             if index > 0 and letter.isupper() and filename_letters[index - 1].isalpha():
                 filename_letters.insert(index, "_")
         basic_filename = "".join(filename_letters)
-
-
     return basic_filename
 
 
