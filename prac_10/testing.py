@@ -11,7 +11,7 @@ def repeat_string(s, n):
     """Repeat\ string s, n times, with spaces in between."""
     string = []
     for _ in range(n):
-         string.append(s)
+        string.append(s)
     string = " ".join(string)
     return string
 
@@ -56,8 +56,10 @@ def run_tests():
 
 run_tests()
 
+
 # TODO: 3. Uncomment the following line and run the doctests
-doctest.testmod()
+
+
 
 # TODO: 4. Fix the failing is_long_word function
 # (don't change the tests, but the function!)
@@ -70,3 +72,26 @@ doctest.testmod()
 # 'It is an ex parrot.' -> 'It is an ex parrot.'
 # and one more you decide (that's valid!)
 # then write the body of the function so that the tests pass
+
+def format_phrase(phrase):
+    """
+    Reformat a phrase passed in to start with a capital and end in a full stop.
+    >>> format_phrase("hello")
+    'Hello.'
+    >>> format_phrase("It is an ex parrot.")
+    'It is an ex parrot.'
+    >>> format_phrase("this is fun.")
+    'This is fun.'
+    """
+    if phrase[0].lower():
+        new_phrase = phrase[0].upper() + phrase[1:]
+    else:
+        new_phrase = phrase
+    if phrase[-1] == ".":
+        pass
+    else:
+        new_phrase += "."
+    return new_phrase
+
+
+doctest.testmod()
